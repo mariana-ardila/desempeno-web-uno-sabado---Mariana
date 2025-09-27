@@ -9,3 +9,25 @@ function mostrarEstadisticas(){
 }
 
 mostrarEstadisticas();
+
+//Punto # 2
+
+const recibirDanio=function(cantidadDanio){
+    puntoSalud-=cantidadDanio;
+
+if (puntoSalud <= 0){
+    console.log("¡Has sido derrotado!");
+}
+
+else{
+        console.log(`Recibiste ${cantidadDanio} de daño. Salud restante: ${puntoSalud} HP`)
+
+}}
+
+
+const ganarExperiencia=(cantidadExp)=>{
+    puntosExperiencia +=cantidadExp;
+    console.log(`¡Ganaste ${cantidadExp} de experiencia! XP total: ${puntosExperiencia}.`)
+}
+recibirDanio(40);
+ganarExperiencia(100)
