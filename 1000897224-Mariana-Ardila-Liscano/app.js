@@ -77,3 +77,51 @@ function diagnosticoHeroe(){
 simularBatalla();
 diagnosticoHeroe();
 
+
+//Punto # 4
+
+
+function iniciarAventura(){
+while (true){
+let opciones=Number(prompt(`---- Menú Aventura -----
+    1.Luchar contra un monstruo
+    2.Tomar poción de salud
+    3.Completar misión (ganar XP)
+    4.Ver diagnóstico del Héroe
+    5.Mostrar Estadísticas
+    6.Retirarse de la aventura
+    `))
+
+    switch(opciones){
+        case 1:
+            simularBatalla();
+        break;
+          case 2:
+            let restaurarSalud=Number(prompt(`¿${nombreHeroe} cuántos puntos de salud quieres restaurar?`));
+            puntoSalud +=restaurarSalud;
+        break;
+          case 3:
+            let experienciaGanada=Number(`¿${nombreHeroe} cuál es la cantidad de experiencia ganada?`)
+             ganarExperiencia(experienciaGanada);
+        break;
+          case 4:
+            diagnosticoHeroe();
+        break;
+          case 5:
+            mostrarEstadisticas();
+        break;
+          case 6:
+            console.log(`¡Nos vemos en la próxima partida!`);
+            return;
+        break;
+        default:
+            console.log(`${opciones} Opción no valida`);
+    }
+}
+
+}
+
+iniciarAventura();
+
+
+
